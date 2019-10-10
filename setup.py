@@ -2,15 +2,22 @@
 
 from setuptools import setup
 
+dependencies = [
+    'hyper>=0.7',
+    'PyJWT>=1.4.0',
+    'cryptography>=1.7.2',
+]
+
+try:
+    import enum
+except ImportError:
+    dependencies.append('enum34')
+
 setup(
     name='apns23',
     version='1.0.0',
     packages=['apns23'],
-    install_requires=[
-        'hyper>=0.7',
-        'PyJWT>=1.4.0',
-        'cryptography>=1.7.2',
-    ],
+    install_requires=dependencies,
     extras_require={
         "tests": [
             'freezegun',

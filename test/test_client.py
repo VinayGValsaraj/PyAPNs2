@@ -1,5 +1,9 @@
 import contextlib
-from mock import MagicMock, Mock, patch
+
+try:
+    from unittest.mock import MagicMock, Mock, patch
+except ImportError:
+    from mock import MagicMock, Mock, patch
 
 import pytest
 
