@@ -7,7 +7,7 @@
 import pytest
 from freezegun import freeze_time
 
-from apns2.credentials import TokenCredentials
+from apns23.credentials import TokenCredentials
 
 TOPIC = 'com.example.first_app'
 

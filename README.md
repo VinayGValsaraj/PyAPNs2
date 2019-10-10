@@ -1,23 +1,20 @@
 # PyAPNs2
 
-[![PyPI version](https://img.shields.io/pypi/v/apns2.svg)](https://pypi.python.org/pypi/apns2)
-[![PyPI version](https://img.shields.io/pypi/pyversions/apns2.svg)](https://pypi.python.org/pypi/apns2)
-[![Build Status](https://drone.pr0ger.dev/api/badges/Pr0Ger/PyAPNs2/status.svg)](https://drone.pr0ger.dev/Pr0Ger/PyAPNs2)
+[![PyPI version](https://img.shields.io/pypi/v/apns23.svg)](https://pypi.python.org/pypi/apns23)
+[![PyPI version](https://img.shields.io/pypi/pyversions/apns23.svg)](https://pypi.python.org/pypi/apns23)
 
 Python library for interacting with the Apple Push Notification service (APNs) via HTTP/2 protocol
 Fork created to support iOS13 messaging with Python 2.7/3.6 support
 
 ## Installation
 
-Either download the source from GitHub or use easy_install:
-
-    $ easy_install apns2
+Download the source from Github.
 
 ## Sample usage
 
 ```python
-from apns2.client import APNsClient
-from apns2.payload import Payload
+from apns23.client import APNsClient
+from apns23.payload import Payload
 
 token_hex = 'b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b87'
 payload = Payload(alert="Hello World!", sound="default", badge=1)
@@ -31,7 +28,7 @@ notifications = [Notification(payload=payload, token=token_hex)]
 client.send_notification_batch(notifications=notifications, topic=topic)
 
 # To use token based authentication
-from apns2.credentials import TokenCredentials
+from apns23.credentials import TokenCredentials
 
 auth_key_path = 'path/to/auth_key'
 auth_key_id = 'app_auth_key_id'
@@ -47,11 +44,11 @@ client.send_notification_batch(notifications=notifications, topic=topic)
 
 ## Contributing
 
-To develop PyAPNs2, check out the code and install dependencies. It's recommended to use a virtualenv to isolate dependencies:
+To develop PyAPNs23, check out the code and install dependencies. It's recommended to use a virtualenv to isolate dependencies:
 ```shell
 # Clone the source code.
-git clone https://github.com/Pr0Ger/PyAPNs2.git
-cd PyAPNs2
+git clone https://github.com/VinayGValsaraj/PyAPNs23.git
+cd PyAPNs23
 # Create a virtualenv and install dependencies.
 virtualenv venv
 . venv/bin/activate
@@ -74,12 +71,12 @@ tox
 To run the linter:
 ```shell
 pip install pylint
-pylint --reports=n apns2 test
+pylint --reports=n apns23 test
 ```
 
 ## License
 
-PyAPNs2 is distributed under the terms of the MIT license.
+PyAPNs23 is distributed under the terms of the MIT license.
 
 See [LICENSE](LICENSE) file for the complete license details.
 

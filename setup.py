@@ -3,9 +3,9 @@
 from setuptools import setup
 
 setup(
-    name='apns2-compat',
+    name='apns23',
     version='1.0.0',
-    packages=['apns2-compat'],
+    packages=['apns23'],
     install_requires=[
         'hyper>=0.7',
         'PyJWT>=1.4.0',
@@ -18,7 +18,7 @@ setup(
             'mock',
         ],
     },
-    url='https://github.com/VinayGValsaraj/PyAPNs2',
+    url='https://github.com/VinayGValsaraj/PyAPNs23',
     license='MIT',
     author='Vinay Valsaraj',
     author_email='vinaygvalsaraj@gmail.com',

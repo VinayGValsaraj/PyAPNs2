@@ -3,9 +3,9 @@ from mock import MagicMock, Mock, patch
 
 import pytest
 
-from apns2.client import APNsClient, CONCURRENT_STREAMS_SAFETY_MAXIMUM, Notification
-from apns2.errors import ConnectionFailed
-from apns2.payload import Payload
+from apns23.client import APNsClient, CONCURRENT_STREAMS_SAFETY_MAXIMUM, Notification
+from apns23.errors import ConnectionFailed
+from apns23.payload import Payload
 
 TOPIC = 'com.example.App'
 
@@ -21,10 +21,10 @@ def notifications(tokens):
     return [Notification(token=token, payload=payload) for token in tokens]
 
 
-@patch('apns2.credentials.init_context')
+@patch('apns23.credentials.init_context')
 @pytest.fixture
 def client(mock_connection):
-    with patch('apns2.credentials.HTTP20Connection') as mock_connection_constructor:
+    with patch('apns23.credentials.HTTP20Connection') as mock_connection_constructor:
         mock_connection_constructor.return_value = mock_connection
         return APNsClient(credentials=None)
 

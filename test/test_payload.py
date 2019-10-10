@@ -1,6 +1,6 @@
 import pytest
 
-from apns2.payload import Payload, PayloadAlert
+from apns23.payload import Payload, PayloadAlert
 
 
 @pytest.fixture
