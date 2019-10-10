@@ -1,5 +1,5 @@
 import contextlib
-from unittest.mock import MagicMock, Mock, patch
+from mock import MagicMock, Mock, patch
 
 import pytest
 

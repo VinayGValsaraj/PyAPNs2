@@ -25,6 +25,7 @@ MANIFEST
 .installed.cfg
 *.egg
 .idea/
+.python-version
 
 # Installer logs
 pip-log.txt

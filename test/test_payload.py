@@ -80,3 +80,15 @@ def test_payload_with_payload_alert(payload_alert):
         },
         'extra': 'something'
     }
+
+
+def test_payload():
+    payload = Payload(alert="Testing Notif", custom={'foo': 'bar'}, sound='')
+    assert payload.dict() == {
+        'aps': {
+            'alert': 'Testing Notif',
+            'sound': '',
+            'content-available': 0,
+        },
+        'foo': 'bar'
+    }
