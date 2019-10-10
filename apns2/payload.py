@@ -73,6 +73,8 @@ class Payload(object):
             result['aps']['sound'] = self.sound
         if self.content_available:
             result['aps']['content-available'] = 1
+        else:
+            result['aps']['content-available'] = 0
         if self.mutable_content:
             result['aps']['mutable-content'] = 1
         if self.thread_id is not None:
