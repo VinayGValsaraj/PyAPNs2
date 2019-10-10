@@ -3,9 +3,9 @@
 from setuptools import setup
 
 setup(
-    name='apns2',
-    version='0.0.1',
-    packages=['apns2'],
+    name='apns2-compat',
+    version='1.0.0',
+    packages=['apns2-compat'],
     install_requires=[
         'hyper>=0.7',
         'PyJWT>=1.4.0',

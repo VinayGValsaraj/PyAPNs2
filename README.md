@@ -5,6 +5,7 @@
 [![Build Status](https://drone.pr0ger.dev/api/badges/Pr0Ger/PyAPNs2/status.svg)](https://drone.pr0ger.dev/Pr0Ger/PyAPNs2)
 
 Python library for interacting with the Apple Push Notification service (APNs) via HTTP/2 protocol
+Fork created to support iOS13 messaging with Python 2.7/3.6 support
 
 ## Installation
 
@@ -64,8 +65,8 @@ pytest
 
 You can use `tox` for running tests with all supported Python versions:
 ```shell
-pyenv install 3.5.6; pyenv install 3.6.7; pyenv install 3.7.1
-pyenv local 3.7.1 3.6.7 3.5.6
+pyenv install 2.7.9; pyenv install 3.6.9
+pyenv local 2.7.9 3.6.9
 pip install tox
 tox
 ```
