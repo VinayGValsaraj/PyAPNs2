@@ -6,16 +6,13 @@ dependencies = [
     'hyper>=0.7',
     'PyJWT>=1.4.0',
     'cryptography>=1.7.2',
+    'enum-compat==0.0.3',
 ]
 
-try:
-    import enum
-except ImportError:
-    dependencies.append('enum34')
 
 setup(
     name='apns23',
-    version='1.0.0',
+    version='1.0.1',
     packages=['apns23'],
     install_requires=dependencies,
     extras_require={
